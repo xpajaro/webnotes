@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Webnotes",
+  "description": "This extension helps you take notes on webpages",
+  "version": "1.0",
+  "background": {
+    "scripts": ["main.js", 
+                "managers/actionManager.js",
+                "managers/inputManager.js",
+                "managers/menuManager.js",
+                "managers/storageManager.js",
+                "managers/menuManager.js",
+                "managers/actionManager.js",],
+    "persistent": false
+  },
+  "permissions": [
+    "contextMenus"
+  ]
+}
