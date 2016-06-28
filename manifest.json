@@ -5,16 +5,30 @@
   "description": "This extension helps you take notes on webpages",
   "version": "1.0",
   "background": {
-    "scripts": ["main.js", 
-                "managers/actionManager.js",
-                "managers/inputManager.js",
-                "managers/menuManager.js",
-                "managers/storageManager.js",
-                "managers/menuManager.js",
-                "managers/actionManager.js",],
+    "scripts": ["shared/messagerInterface.js",
+                "shared/storageManager.js",
+                "background/messager.js",
+                "background/actionManager.js",
+                "background/menuManager.js",
+                "background/main.js"],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "js": [
+        "shared/messagerInterface.js",
+        "shared/storageManager.js",
+        "content/messager.js",
+        "content/actionManager.js",
+        "content/main.js"
+      ]
+    }
+  ],
   "permissions": [
-    "contextMenus"
-  ]
+    "contextMenus",
+    "storage"
+  ],
+  "web_accessible_resources": ["css/page.css"]
 }

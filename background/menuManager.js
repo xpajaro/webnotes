@@ -1,6 +1,7 @@
 
 
 var MENU_ID = "saveNoteMenu" ;
+var MENU_CAPTION = "Add note" ;
 
 
 function onClickHandler(info, tab) {
@@ -10,7 +11,7 @@ function onClickHandler(info, tab) {
 };
 
 function createMenu(){
-    chrome.contextMenus.create({"title": "Add note", 
+    chrome.contextMenus.create({"title": MENU_CAPTION, 
 								"contexts":["selection"],
                                 "id": MENU_ID});
 }
