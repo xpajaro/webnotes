@@ -1,12 +1,27 @@
- .note-input {
+ #note-input-title{
  	margin-top:10px; 
+ 	font-size:13px;
+ 	background: #ff9900;
+ 	color:white;
+ 	padding:5px 10px 5px 10px;
+ 	width:100%;
+ 	border-radius:5px;
+ 	overflow:auto;
+ }
+
+ #note-input-action-container{
+ 	float:right;
+ }
+
+ .note-input {
+ 	margin-top:2px; 
  	margin-bottom:30px; 
- 	width:90%;
+ 	width:100%;
  	display: inline-block;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
-	padding: 10px 20px;
+	padding: 10px;
 	border: 1px solid #ff9900;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;

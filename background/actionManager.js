@@ -1,6 +1,7 @@
 
+
 function addNote(){
-	var payload = {"addNote":0};
+	var payload = {"addNote":1};
 	BackgroundMessager.sendMessageToExistingTab(payload);
 }
 
@@ -9,10 +10,10 @@ function saveNote(text){
 	console.log(text);
 }
 
-
 function removeNote(noteID){
 	//call storage and delete Note
 }
 
+//actions accessible by content as public APIs
 var actionAPIs = {"saveNote": saveNote, 
 				  "removeNote": removeNote};

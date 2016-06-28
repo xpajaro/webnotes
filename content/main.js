@@ -7,9 +7,17 @@ function loadCss(){
 	(document.head || document.documentElement).appendChild(link);
 }
 
+function loadJquery(){
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = chrome.runtime.getURL("lib/jquery-3.0.0.min.js");
+	(document.head || document.documentElement).appendChild(script);
+}
+
 function init(){
 
 loadCss();
+loadJquery()
 
 //load listeners
 ContentMessager.receiveMessages();
