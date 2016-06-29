@@ -17,15 +17,22 @@ If you added a note, whenever you open that page it's there.
 
 
 PIPELINE:
-1. I'm currently working on a page that lets you see your awesome note taking history.
-2. Mulling on a cooler name.
+- I'm currently working on a page that lets you see your awesome note taking history.
+- Icons.
+- Mulling on a cooler name.
+
+
+TODO:
+- I need to work on some hashing handler for when pages change...
+- I need to work on a vanilla sharing component. 
+- I need to start a release / feature / bugfix scheme once the basics are done.
 
 
 HOW TO READ THE CODE:
 This is my first Chrome extension. It's been fun and I welcome ideas on making Webnotes better.
 Chrome extensions work from two points: 
-1. the background - It's like a backend for your own fancy presentation and logic.
-2. the content - You interact with the pages in the tabs on the browser.
+- the background - It's like a backend for your own fancy presentation and logic.
+- the content - You interact with the pages in the tabs on the browser.
  
 The code is pretty simple. Just follow main.js in either folder. I've made sure nothing happens that doesn't begin there.
 
