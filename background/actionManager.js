@@ -1,7 +1,7 @@
 
 
 function addNote(){
-	var payload = {"addNote":1};
+	var payload = {"writeNote":1};
 	BackgroundMessager.sendMessageToExistingTab(payload);
 }
 

@@ -9,26 +9,14 @@ function getTemplate(templateID, callback){
 	});
 }
 
-
-//insert text input  after paragraph or parent of text
-function addNote(selection){
-	var selected = window.getSelection();
-
-	getTemplate(WRITE_NOTE_TEMPLATE, function(data){
-		$(selected.anchorNode).after(data);
-	});	
+function writeNote(){
+	createNoteWriter();
 }
 
 function saveNote(){
+	//store!!!
 	
 }
 
-
-function onClickHandlers(){
-	$("#btnSave").click(function(){
-		saveNote();
-	});
-}
-
-var actionAPIs = {"addNote" : addNote};
+var actionAPIs = {"writeNote" : writeNote};
 
