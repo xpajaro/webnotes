@@ -13,15 +13,15 @@ function writeNote(){
 	createNoteWriter();
 }
 
-function saveNote(node){
+function saveNote(nodePath){
 	var content = $("#noteContent").val();
 	var successful;
 
 	if (content && content.trim()){
 		var noteID = Math.round(new Date().getTime()/1000);
-		var note = new Note(content, node, noteID);
+		var note = new Note(content, nodePath, noteID);
 
-		storeNote(note, node.baseURI, function(){
+		storeNote(note, document.baseURI, function(){
 			createAnnotation(note);
 		});
 

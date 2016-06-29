@@ -10,7 +10,8 @@ function deleteNoteWriter(){
 
 function noteWriterClickHandlers(){
 	$("#btnSave").click(function(){
-		if ( saveNote(selectedNode) ){
+		var nodePath = getNodeXPath(selectedNode);
+		if ( saveNote(nodePath) ){
 			deleteNoteWriter();
 		}
 	});
@@ -28,10 +29,12 @@ function createNoteWriter(){
 		if (currentNoteWriter){
 			currentNoteWriter.remove();
 		}
-		//.after returns the elem selected, .next gets the elem after
+
 		selectedNode = selected.anchorNode;
 
 		//write to page
+		//.after returns the elem selected, .next gets the elem after
+		//we want to select the notewriter web control
 		currentNoteWriter = $(selectedNode).after(data).next()[0];
 		$("#noteContent").focus();
 

@@ -12,3 +12,17 @@ function loadJquery(){
 	script.src = chrome.runtime.getURL("lib/jquery-3.0.0.min.js");
 	(document.head || document.documentElement).appendChild(script);
 }
+
+function displayAnnotations(notes){
+	var noteIDs = Object.keys(notes);
+
+	noteIDs.forEach(function(noteID){
+		createAnnotation(notes[noteID]);
+	});
+}
+
+function loadAnnotations(){
+	var pageAddress = document.baseURI;
+
+	getNotes(pageAddress, displayAnnotations);
+}

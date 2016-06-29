@@ -21,6 +21,7 @@
       "all_frames": true,
       "js": [
         "lib/jquery-3.0.0.min.js",
+        "lib/XPathParser.js",
         "shared/messagerInterface.js",
         "shared/dataInterfaces.js",
         "shared/storageManager.js",
