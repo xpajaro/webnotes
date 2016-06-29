@@ -1,6 +1,7 @@
 
 
 var currentNoteWriter;
+var selectedNode;
 
 function deleteNoteWriter(){
 	currentNoteWriter.remove();
@@ -9,8 +10,9 @@ function deleteNoteWriter(){
 
 function noteWriterClickHandlers(){
 	$("#btnSave").click(function(){
-		deleteNoteWriter();
-		saveNote();
+		if ( saveNote(selectedNode) ){
+			deleteNoteWriter();
+		}
 	});
 
 	$("#btnCancel").click(function(){
@@ -26,8 +28,13 @@ function createNoteWriter(){
 		if (currentNoteWriter){
 			currentNoteWriter.remove();
 		}
-		//.after returns the elem operated on, .next gets the elem after
-		currentNoteWriter = $(selected.anchorNode).after(data).next()[0];
+		//.after returns the elem selected, .next gets the elem after
+		selectedNode = selected.anchorNode;
+
+		//write to page
+		currentNoteWriter = $(selectedNode).after(data).next()[0];
+		$("#noteContent").focus();
+
 		noteWriterClickHandlers();
 	});	
 }
