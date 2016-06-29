@@ -25,6 +25,7 @@ PIPELINE:
 TODO:
 - I need to work on some hashing handler for when pages change...
 - I need to work on a vanilla sharing component. 
+- I need to work on an AWS backend for handling user accounts/interaction.
 - I need to start a release / feature / bugfix scheme once the basics are done.
 
 
